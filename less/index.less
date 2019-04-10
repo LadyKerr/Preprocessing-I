@@ -55,6 +55,25 @@ table {
 
 html, body {
 	height: 100%;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+@background-color: gray;
+@main-color:white;
+@font-color: yellow;
+@font-stack: Arial, "sans-serif";
+
+body {
+	background-color: @background-color;
+}
+.container {
+	background-color: @main-color;
+}
+
+.section h2 {
+	font: @font-stack;
+	color: @font-color;
 }
 
 
