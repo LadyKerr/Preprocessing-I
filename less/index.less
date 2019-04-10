@@ -61,7 +61,7 @@ html, body {
 
 @background-color: gray;
 @main-color:white;
-@font-color: yellow;
+@font-color: blue;
 @font-stack: Arial, "sans-serif";
 
 body {
@@ -70,6 +70,33 @@ body {
 .container {
 	background-color: @main-color;
 }
+
+header {
+	border-bottom: 1px solid black;
+	margin: 20px 0;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+	}
+
+	h1 {
+		font-size: 4rem;
+		color: @font-color;
+
+		@media (max-width: 500px) {
+			font-size: 2rem;
+		} 
+	} //h1 closes
+
+	nav {
+		display: flex;
+	}
+} //header closes
 
 .section h2 {
 	font: @font-stack;
