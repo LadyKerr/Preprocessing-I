@@ -59,7 +59,7 @@ html, body {
 	margin: 0 auto;
 }
 
-@background-color: gray;
+@background-color: white;
 @main-color:white;
 @font-color: blue;
 @font-stack: Arial, "sans-serif";
@@ -79,14 +79,15 @@ header {
 	justify-content: space-between;
 
 	@media (max-width: 500px) {
+		width: 45%;
 		flex-direction: column;
 		align-items: center;
-		width: 90%;
 	}
 
 	h1 {
 		font-size: 4rem;
 		color: @font-color;
+		margin-bottom: 20px;
 
 		@media (max-width: 500px) {
 			font-size: 2rem;
@@ -94,12 +95,28 @@ header {
 	} //h1 closes
 
 	nav {
+		width: 500px;
 		display: flex;
+		justify-content: space-between;
 	}
+
+	a {
+		font-family: @font-stack;
+		font-size: 1rem;
+		margin: 0;
+		text-decoration: none;
+		cursor: pointer;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+			margin-left: 0;
+		}
+
+	} //a closes
 } //header closes
 
 .section h2 {
-	font: @font-stack;
+	font-family: @font-stack;
 	color: @font-color;
 }
 
