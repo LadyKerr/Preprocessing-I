@@ -64,6 +64,11 @@ html, body {
 @font-color: blue;
 @font-stack: Arial, "sans-serif";
 
+.center() {
+	display: flex;
+	justify-content: space-between;
+}
+
 body {
 	background-color: @background-color;
 }
@@ -75,8 +80,7 @@ header {
 	border-bottom: 1px solid black;
 	margin: 20px 0;
 	padding: 20px 0;
-	display: flex;
-	justify-content: space-between;
+	.center;
 
 	@media (max-width: 500px) {
 		width: 45%;
@@ -96,8 +100,7 @@ header {
 
 	nav {
 		width: 500px;
-		display: flex;
-		justify-content: space-between;
+		.center;
 	}
 
 	a {
@@ -111,14 +114,31 @@ header {
 			flex-direction: column;
 			margin-left: 0;
 		}
-
 	} //a closes
 } //header closes
 
-.section h2 {
-	font-family: @font-stack;
-	color: @font-color;
-}
+.section {
+	margin: 20px;
+	
+	@media (max-width: 500px) {
+		.center;
+		flex-direction: column;
+	}
+
+	h2 {
+		font-family: @font-stack;
+		color: @font-color;
+	} //h2 ends
+
+	p {
+		@media (max-width: 500px) {
+			width: 42%;
+			text-align: justify;
+		}
+	}
+	
+} //section ends
+
 
 
 

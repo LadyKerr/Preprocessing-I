@@ -184,7 +184,23 @@ header a {
     margin-left: 0;
   }
 }
+.section {
+  margin: 20px;
+}
+@media (max-width: 500px) {
+  .section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
 .section h2 {
   font-family: Arial, "sans-serif";
   color: blue;
+}
+@media (max-width: 500px) {
+  .section p {
+    width: 42%;
+    text-align: justify;
+  }
 }
